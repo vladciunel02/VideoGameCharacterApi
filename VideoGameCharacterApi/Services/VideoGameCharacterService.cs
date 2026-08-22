@@ -21,7 +21,7 @@ namespace VideoGameCharacterApi.Services
             throw new NotImplementedException();
         }
 
-        public async Task<Character> GetCharacterAsync(int characterId)
+        public async Task<Character?> GetCharacterByIdAsync(int characterId)
         {
             var result = characters.FirstOrDefault(c => c.Id == characterId);
             return await Task.FromResult(result);
