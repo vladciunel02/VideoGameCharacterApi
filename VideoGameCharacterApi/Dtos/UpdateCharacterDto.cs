@@ -1,6 +1,6 @@
 ﻿namespace VideoGameCharacterApi.Dtos
 {
-    public class CharacterResponseDto
+    public class UpdateCharacterDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
