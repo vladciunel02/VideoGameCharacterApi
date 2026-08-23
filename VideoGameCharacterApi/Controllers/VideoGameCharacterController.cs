@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using VideoGameCharacterApi.Models;
 using VideoGameCharacterApi.Services;
-
+using VideoGameCharacterApi.Dtos;
 namespace VideoGameCharacterApi.Controllers
 {
     [Route("api/[controller]")]
@@ -11,7 +11,7 @@ namespace VideoGameCharacterApi.Controllers
     {
 
         [HttpGet]
-        public async Task<ActionResult<List<Character>>> GetCharacters()
+        public async Task<ActionResult<List<CharacterResponseDto>>> GetCharacters()
                 => Ok(await service.GetAllCharactersAsync());
         [HttpGet("{id}")]
         public async Task<ActionResult<Character?>> GetCharacter(int id)
