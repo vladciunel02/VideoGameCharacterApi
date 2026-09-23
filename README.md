@@ -18,3 +18,22 @@ Character has: Id, Name, Game, Role.
 - POST /api/character
 - PUT /api/character/{id}
 - DELETE /api/character/{id}
+
+## Tests
+
+There's a separate test project, `VideoGameCharacterApi.Tests`, with unit tests for the service layer (`VideoGameCharacterService`), using NUnit.
+
+The tests run against an EF Core in-memory database instead of real SQL Server, so they're fast and don't need any setup — each test gets its own clean, isolated database.
+
+Covered so far:
+- adding a character and getting back a valid id
+- getting a character by id, both when it exists and when it doesn't
+- getting the full list of characters
+
+Not covered yet: updating and deleting a character.
+
+Run with:
+
+```
+dotnet test
+```
