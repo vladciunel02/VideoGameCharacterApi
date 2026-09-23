@@ -17,8 +17,4 @@
     <PackageReference Include="Scalar.AspNetCore" Version="2.16.20" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include=".github\workflows\ci.yml" />
-  </ItemGroup>
-
 </Project>
